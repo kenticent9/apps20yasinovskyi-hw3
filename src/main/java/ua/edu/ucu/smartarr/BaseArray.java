@@ -2,7 +2,7 @@ package ua.edu.ucu.smartarr;
 
 // Base array for decorators
 public class BaseArray implements SmartArray {
-    Object [] elems;
+    private Object [] elems;
 
     public BaseArray(Object[] elems) {
         this.elems = elems;

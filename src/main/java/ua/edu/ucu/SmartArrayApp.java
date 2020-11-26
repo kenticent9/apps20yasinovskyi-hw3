@@ -53,9 +53,11 @@ public class SmartArrayApp {
             findDistinctStudentNamesFrom2ndYearWithGPAgt4AndOrderedBySurname(Student[] students) {
 
         MyPredicate pr = new MyPredicate() {
+            private static final int MINGPA = 4;
+
             @Override
             public boolean test(Object t) {
-                return ((Student) t).getYear() == 2 && ((Student) t).getGPA() >= 4;
+                return ((Student) t).getYear() == 2 && ((Student) t).getGPA() >= MINGPA;
             }
         };
 
