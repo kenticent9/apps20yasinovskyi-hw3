@@ -43,8 +43,6 @@ public class DistinctDecorator extends SmartArrayDecorator {
         HashSet<Object> set = new HashSet<>();
         int i = 0;
         for (Object elem : array) {
-            System.out.println(elem.hashCode());
-            System.out.println(set.contains(elem));
             if (!set.contains(elem)) {
                 set.add(elem);
                 newArray[i++] = elem;
