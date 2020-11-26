@@ -1,6 +1,9 @@
 package ua.edu.ucu;
 
 import org.junit.Test;
+
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 /**
@@ -18,6 +21,16 @@ public class SmartArrayAppTest {
         Integer[] expectedRes = {2, 4, 6};
         
         assertArrayEquals(expectedRes, res);        
+    }
+
+    @Test
+    public void testWithEmptyArray() {
+        assertArrayEquals(SmartArrayApp.filterPositiveIntegersSortAndMultiplyBy2(new Integer[] {}), new Integer[] {});
+    }
+
+    @Test
+    public void testWithOneElementArray() {
+        assertArrayEquals(SmartArrayApp.filterPositiveIntegersSortAndMultiplyBy2(new Integer[] {1}), new Integer[] {2});
     }
 
     @Test
